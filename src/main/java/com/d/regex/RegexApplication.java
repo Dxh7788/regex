@@ -4,7 +4,7 @@ package com.d.regex;
  * Hello world!
  *
  */
-public class App 
+public class RegexApplication
 {
     public static void main( String[] args )
     {

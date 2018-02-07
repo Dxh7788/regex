@@ -1,16 +1,19 @@
 package com.d.regex;
 
 
+import org.junit.Test;
+
 import static org.junit.Assert.assertTrue;
 
 /**
- * Unit test for simple App.
+ * Unit test for simple RegexApplication.
  */
-public class AppTest 
+public class RegexApplicationTest
 {
     /**
      * Rigourous Test :-)
      */
+    @Test
     public void testApp()
     {
         assertTrue( true );
