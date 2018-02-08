@@ -1,4 +1,4 @@
-package com.d.regex.rule;
+package com.d.regex.grammer;
 
 /**
  * Copyright (C) 2017-2018 https://www.htouhui.com - A project by regex
