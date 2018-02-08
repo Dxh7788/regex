@@ -3,6 +3,9 @@ package com.d.regex;
 
 import org.junit.Test;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 import static org.junit.Assert.assertTrue;
 
 /**
@@ -32,5 +35,14 @@ public class RegexApplicationTest
         System.out.println(cmp.matches("abc*"));
         System.out.println(cmp.matches("abc?"));
         System.out.println(cmp.matches("[*.*]"));
+    }
+
+    @Test
+    public void testSimpleRegex(){
+        String compile = "abc";
+        Pattern pattern = Pattern.compile("^[a-z]*$");
+        Matcher matcher= pattern.matcher(compile);
+        System.out.println(matcher.matches());
+        System.out.println(matcher.group(0));
     }
 }
