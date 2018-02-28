@@ -64,4 +64,31 @@ public class RegexApplicationTest
         String input = "abc@123.com";
         System.out.println(input.matches(regex));
     }
+    /**
+     * (?<=) 匹配以str开头的字符串
+     * (?:) 非获取匹配，匹配pattern但不获取匹配结果，不进行存储供以后使用
+     * (?=) 非获取匹配，正向肯定预查
+     * (?!) 非获取匹配，反向否定预查
+     * (?<=) 非获取匹配，反向肯定预查
+     * (?<!) 非获取匹配，反向否定预查，与正向否定预查类似，只是方向相反
+     * */
+    @Test
+    public void divTest(){
+        String regex = "<div class=\"selectPeriodicalList project-float fl\" onclick= (.*)";
+        String input = "<div class=\"selectPeriodicalList project-float fl\" onclick= window.open(\"/html/12312321\")";
+        Pattern pattern = Pattern.compile(regex);
+        Matcher matcher = pattern.matcher(input);
+
+        while (matcher.find()){
+            String comma = matcher.group(1);
+            System.out.println(comma);
+            String commaRegex = "(?<=\\(\"/html/)[^\\)]+(?=\")";
+            Pattern commaPattern = Pattern.compile(commaRegex);
+            Matcher commaMather = commaPattern.matcher(comma);
+            while (commaMather.find()){
+                System.out.println(commaMather.group());
+            }
+        }
+        System.out.println(pattern.matcher(input).groupCount());
+    }
 }
