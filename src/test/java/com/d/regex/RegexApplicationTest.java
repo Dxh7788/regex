@@ -91,4 +91,10 @@ public class RegexApplicationTest
         }
         System.out.println(pattern.matcher(input).groupCount());
     }
+    @Test
+    public void regTest(){
+        String input = "dop123";
+        String regex = "[a-z]\\{1,3}[1-9]\\{1, 3}";
+        System.out.println(input.matches(regex));
+    }
 }
