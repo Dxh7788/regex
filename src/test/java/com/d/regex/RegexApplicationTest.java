@@ -86,7 +86,7 @@ public class RegexApplicationTest
             Pattern commaPattern = Pattern.compile(commaRegex);
             Matcher commaMather = commaPattern.matcher(comma);
             while (commaMather.find()){
-                System.out.println(commaMather.group());
+                System.out.println("项目编号为:"+commaMather.group());
             }
         }
         System.out.println(pattern.matcher(input).groupCount());
