@@ -97,4 +97,10 @@ public class RegexApplicationTest
         String regex = "[a-z]\\{1,3}[1-9]\\{1, 3}";
         System.out.println(input.matches(regex));
     }
+    @Test
+    public void timeRegexTest(){
+        String input = "2018-02-28";
+        String regex = "^(\\d{1,4})(-|\\/)(\\d{1,2})\\2(\\d{1,2})$";
+        System.out.println(input.matches(regex));
+    }
 }
